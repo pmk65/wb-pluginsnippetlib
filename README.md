@@ -50,7 +50,8 @@ If destination is a directory, an error occurs.<br>
 <br>
 @param  string   source location of one or more files to be copied<br>
 @param  string   destination location to where one or more files in source will be copied<br>
-@param  bool     overwrite True allows the overwriting of existing files in the destination</td>
+@param  bool     overwrite True allows the overwriting of existing files in the destination<br>
+@return void</td>
   </tr>
  
   <tr>
@@ -63,7 +64,8 @@ If destination is an existing file, an error occurs.<br>
 If destination is a directory, an error occurs.<br>
 
 @param  string   source location of one or more files to be moved<br>
-@param  string   destination location to where one or more files in source will be moved</td>
+@param  string   destination location to where one or more files in source will be moved<br>
+@return void</td>
   </tr>
   
   <tr>

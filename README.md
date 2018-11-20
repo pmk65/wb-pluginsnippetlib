@@ -12,9 +12,9 @@ HTMLPad: https://www.htmlpad.net/
 FastScript snippet library with various functions to help creating WeBuilder plugins.
 
 
-#### Filehandling functions:
+### Filehandling functions:
 
-<table>
+<table width="100%">
 
   <tr>
   <td valign="top"><strong>GetFilesList(folder)</strong></td>
@@ -185,9 +185,9 @@ Path/file must exist on system, otherwise longname is returned<br>
 
 </table>
 
-#### AJAX functions:
+### AJAX functions:
 
-<table>
+<table width="100%">
 
   <tr>
     <td valign="top"><strong>ParseJson(jsonStr)</strong></td>
@@ -208,9 +208,9 @@ getKeys(dummy) to get list of keys<br>
 
 </table>
 
-#### Variables functions:
+### Variables functions:
 
-<table>
+<table width="100%">
 
   <tr>
     <td valign="top"><strong>GetVarType(val)</strong></td>
@@ -263,9 +263,9 @@ getKeys(dummy) to get list of keys<br>
 
 </table>
 
-#### RegularExpression functions:
+### RegularExpression functions:
 
-<table>
+<table width="100%">
 
   <tr>
     <td valign="top"><strong>WildcardsToRegex(str)</strong></td>
@@ -283,9 +283,9 @@ getKeys(dummy) to get list of keys<br>
 
 </table>
 
-#### Misc functions:
+### Misc functions:
 
-<table>
+<table width="100%">
 
   <tr>
     <td valign="top"><strong>Debug(label, val)</strong></td>

@@ -65,7 +65,7 @@ If source contains wildcards or destination ends with a path separator (\), it i
     <li>If destination does not exist, the file gets moved. This is the usual case.</li>
     <li>If destination is an existing file, an error occurs.</li>
     <li>If destination is a directory, an error occurs.</li>
-  </ul>  
+  </ul>
 @param  string   source location of one or more files to be moved<br>
 @param  string   destination location to where one or more files in source will be moved<br>
 @return void</td>
@@ -82,11 +82,13 @@ If source contains wildcards or destination ends with a path separator (\), it i
   <tr>
     <td valign="top"><strong>CopyFolder(source, destination, overwrite)</strong></td>
     <td valign="top"><strong>Copy one or more folders from one location (the source) to another (destination)</strong><br>
-If source contains wildcard characters or destination ends with a path separator (\), it is assumed that destination is an existing folder in which to copy matching folders and subfolders. Otherwise, destination is assumed to be the name of a folder to create. In either case, four things can happen when an individual folder is copied.<br>
-If destination does not exist, the source folder and all its contents gets copied. This is the usual case.<br>
-If destination is an existing file, an error occurs.<br>
-If destination is a directory, an attempt is made to copy the folder and all its contents. If a file contained in source already exists in destination, an error occurs if overwrite is false. Otherwise, it will attempt to copy the file over the existing file. <br>
-If destination is a read-only directory, an error occurs if an attempt is made to copy an existing read-only file into that directory and overwrite is false.<br>
+If source contains wildcard characters or destination ends with a path separator (\), it is assumed that destination is an existing folder in which to copy matching folders and subfolders. Otherwise, destination is assumed to be the name of a folder to create. In either case, four things can happen when an individual folder is copied.
+  <ul>
+    <li>If destination does not exist, the source folder and all its contents gets copied. This is the usual case.</li>
+    <li>If destination is an existing file, an error occurs.</li>
+    <li>If destination is a directory, an attempt is made to copy the folder and all its contents. If a file contained in source already exists in destination, an error occurs if overwrite is false. Otherwise, it will attempt to copy the file over the existing file.</li>
+    <li>If destination is a read-only directory, an error occurs if an attempt is made to copy an existing read-only file into that directory and overwrite is false.</li>
+  </ul>
 @param  string   source location of one or more folders to be copied<br>
 @param  string   destination location to where one or more folders in source will be copied<br>
 @param  bool     overwrite True allows the overwriting of existing folders in the destination<br>
@@ -96,10 +98,12 @@ If destination is a read-only directory, an error occurs if an attempt is made t
   <tr>
     <td valign="top"><strong>MoveFolder(source, destination)</strong></td>
     <td valign="top"><strong>Move one or more folders from one location (the source) to another (destination)</strong><br>
-If source contains wildcards or destination ends with a path separator (\), it is assumed that destination specifies an existing folder in which to move the matching files. Otherwise, destination is assumed to be the name of a destination folder to create. In either case, three things can happen when an individual folder is moved:<br>
-If destination does not exist, the folder gets moved. This is the usual case.<br>
-If destination is an existing file, an error occurs.<br>
-If destination is a directory, an error occurs.<br>
+If source contains wildcards or destination ends with a path separator (\), it is assumed that destination specifies an existing folder in which to move the matching files. Otherwise, destination is assumed to be the name of a destination folder to create. In either case, three things can happen when an individual folder is moved:
+  <ul>
+    <li>If destination does not exist, the folder gets moved. This is the usual case.</li>
+    <li>If destination is an existing file, an error occurs.</li>
+    <li>If destination is a directory, an error occurs.</li>
+  </ul>
 @param  string   source location of one or more folders to be moved<br>
 @param  string   destination location to where one or more folders in source will be moved<br>
 @return void</td>
@@ -185,6 +189,14 @@ Path/file must exist on system, otherwise longname is returned<br>
 @return string</td>
   </tr>
 
+  <tr>
+    <td valign="top"><strong>TrimPath(path, segments)</strong></td>
+    <td valign="top"><strong>Removes last segment of path/url</strong><br>
+@param  string   path the path/url to trim<br>
+@param  int      segments number of segments to trim<br>
+@return string</td>
+  </tr>
+
 </table>
 
 ### AJAX functions:
@@ -194,9 +206,11 @@ Path/file must exist on system, otherwise longname is returned<br>
   <tr>
     <td valign="top"><strong>ParseJson(jsonStr)</strong></td>
     <td valign="top"><strong>JSON parser using "htmlfile" OLE object</strong><br>
-The JSON result object is extended with two custom methods, making data fully accessible from FastScript. Custom methods:<br>
-getProp(key/index) to access properties by index or name<br>
-getKeys(dummy) to get list of keys<br>
+The JSON result object is extended with two custom methods, making data fully accessible from FastScript. Custom methods:
+  <ul>
+    <li><strong>getProp(key/index)</strong> to access properties by index or name</li>
+    <li><strong>getKeys(dummy)</strong> to get list of keys</li>
+  </ul>
 @param  string   jsonStr The JSON string to parse<br>
 @return mixed    variant or empty string if failure</td>
   </tr>
@@ -283,6 +297,58 @@ getKeys(dummy) to get list of keys<br>
 @return string</td>
   </tr>
 
+</table>
+
+### GUI functions:
+
+<table>
+
+  <tr>
+    <td colspan="2"><strong>TEdit Helpers</strong></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>NumbersOnly(Sender, key)</strong></td>
+    <td valign="top"><strong>OnKeyPress event handler - Prevent entry of chars other than numbers</strong><br>
+@param     object  Sender: The parent object<br>
+@param     string  key: The character key pressed<br>
+@return    void</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>NumbersAndPeriodOnly(Sender, key)</strong></td>
+    <td valign="top"><strong>OnKeyPress event handler - Prevent entry of chars other than numbers and a single period</strong><br>
+@param     object  Sender: The parent object<br>
+@param     string  key: The character key pressed<br>
+@return    void</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>HideCaret(Sender)</strong></td>
+    <td valign="top"><strong>OnEnter callback for use in TRichEdit/TEdit - Hide caret in TRichEdit/TEdit when in ReadOnly Mode</strong><br>
+@param  object   Sender<br>
+@return void</td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>TListBox Helpers</strong></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>SetSelection(Sender, selected)</strong></td>
+    <td valign="top"><strong>Set selection in TListBox</strong><br>
+@param  object   Sender  the TListBox object<br>
+@param  string   selected  comma separated list of selected item values<br>
+@return void</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>GetSelection(Sender)</strong></td>
+    <td valign="top"><strong>Get selection from TListBox</strong><br>
+@param  object  Sender  the TListBox object<br>
+@return string   res   comma separated list of selected items
+</td>
+  </tr>
 </table>
 
 ### Misc functions:
@@ -379,7 +445,7 @@ Similar to Webkit/Chromium frame, except no frame/window needs to be opened firs
   <tr>
     <td valign="top"><strong>SendKeys(keys)</strong></td>
     <td valign="top"><strong>Sends one or more keystrokes to the active window (as if typed on the keyboard)</strong><br>
-For more info, see: <a href="href="https://msdn.microsoft.com/en-us/library/8c6yea83.aspx">https://msdn.microsoft.com/en-us/library/8c6yea83.aspx</a><br>
+For more info, see: <a href="https://msdn.microsoft.com/en-us/library/8c6yea83.aspx" target="_blank">https://msdn.microsoft.com/en-us/library/8c6yea83.aspx</a><br>
 Example: (Activates Find dialog and enter "hello" in searchfield)<br>
 SendKeys("^fhello");<br>
 @param  string   ksSeq<br>

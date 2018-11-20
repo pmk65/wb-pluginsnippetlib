@@ -14,7 +14,12 @@ FastScript snippet library with various functions to help creating WeBuilder plu
 
 ### Filehandling functions:
 
-<table width="100%">
+<style>
+table {
+    width:100%;
+}
+</style>
+<table>
 
   <tr>
   <td valign="top"><strong>GetFilesList(folder)</strong></td>
@@ -187,7 +192,7 @@ Path/file must exist on system, otherwise longname is returned<br>
 
 ### AJAX functions:
 
-<table width="100%">
+<table>
 
   <tr>
     <td valign="top"><strong>ParseJson(jsonStr)</strong></td>
@@ -210,7 +215,7 @@ getKeys(dummy) to get list of keys<br>
 
 ### Variables functions:
 
-<table width="100%">
+<table>
 
   <tr>
     <td valign="top"><strong>GetVarType(val)</strong></td>
@@ -265,7 +270,7 @@ getKeys(dummy) to get list of keys<br>
 
 ### RegularExpression functions:
 
-<table width="100%">
+<table>
 
   <tr>
     <td valign="top"><strong>WildcardsToRegex(str)</strong></td>
@@ -285,7 +290,7 @@ getKeys(dummy) to get list of keys<br>
 
 ### Misc functions:
 
-<table width="100%">
+<table>
 
   <tr>
     <td valign="top"><strong>Debug(label, val)</strong></td>

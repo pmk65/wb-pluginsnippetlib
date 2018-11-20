@@ -1,4 +1,4 @@
-# wb-pluginsnippetlib
+# wbl-pluginsnippetlib
 Plugin Snippet Library for Blumentals WeBuilder/RapidPHP/RapidCSS/HTMLPad editors
 
 This is a Snippet Library for the following editors:
@@ -113,53 +113,76 @@ If destination is a directory, an error occurs.<br>
 
   <tr>
     <td valign="top"><strong>SelectFile(defaultPath, title)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Bring up dialog to select file</strong><br>
+@param  string   defaultPath initial path<br>
+@param  string   title displayed in dialogbox<br>
+@return string   path/filename name of file selected</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>SelectFolder(defaultPath, text, createnew)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Bring up dialog to select folder</strong><br>
+@param  string   defaultPath  initial folder<br>
+@param  string   text         title displayed in dialogbox<br>
+@param  bool     createnew    enable creating of new folder in the dialog
+@return string   path</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>FileGetContents(filename)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Load external file and return the contents</strong><br>
+@param  string   filename the name of the file to load<br>
+ @return string  the contents of the file</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>FilePutContents(filename, contents)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Save contents to external file</strong><br>
+@param  string   filename the name of the file to save<br>
+@param  string   contents the contents of the file<br>
+@return void</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>GetTempFileName(ext)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Creates a random tempfile name, located in the system TEMP folder</strong><br>
+@param  string   ext  file extension in format ".xxx". Default is ".tmp"<br>
+@return string   path/name to tempfile</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>GetSystemFolder(type)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Obtain the full path to any of the special Windows folders</strong><br>
+@param  string  type One of the following special folders: AllUsersDesktop, AllUsersStartMenu, AllUsersPrograms, AllUsersStartup, Desktop, Favorites, Fonts, MyDocuments, NetHood, PrintHood, Programs, Recent, SendTo, StartMenu, Startup, Templates<br>
+@return string</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>GetRelPath(abspath, root, slash)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Convert absolute path to relative path</strong><br>
+Works with both slash and backslash as dividers<br>
+@param  string   path   The absolute path to convert<br>
+@param  string   root   The root path from which the relative path is calculated<br>
+@param  bool     slash  Use slash as divider. default is backslash<br>
+@return string   the relative path</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>GetRecursiveFileList(folder)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Get recursive list of files in a given path</strong><br>
+@param  string   folder  the root folder<br>
+@return string   comma separated list of file or folder names
+</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>ToShortName(longName)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Convert Windows long name to short name</strong><br>
+Path/file must exist on system, otherwise longname is returned<br>
+@param  string   longName<br>
+@return string</td>
   </tr>
 
-  <tr>
-    <td valign="top"></td>
-    <td valign="top"></td>
-  </tr>
 </table>
 
 #### AJAX functions:
@@ -198,7 +221,7 @@ getKeys(dummy) to get list of keys<br>
 
   <tr>
     <td valign="top"><strong>VarTypeAsText(type)</strong></td>
-    <td valign="top"<strong>>Convert variable type (integer) to text value (constant name)</strong><br>
+    <td valign="top"><strong>Convert variable type (integer) to text value (constants name)</strong><br>
 @param  integer   type The variable type<br>
 @return string    The textual name of the variable type</td>
   </tr>

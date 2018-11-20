@@ -32,7 +32,8 @@ FastScript snippet library with various functions to help creating WeBuilder plu
 
   <tr>
     <td valign="top"><strong>GetFilesFoldersList(folder)</strong></td>
-    <td valign="top">@param  string   folder  the root folder<br>
+    <td valign="top"><strong>Get list of files or folders of a given path</strong><br>
+@param  string   folder  the root folder<br>
 @param  int      mode    0=files, 1=folders<br>
 @return string   comma separated list of file or folder names
  </td>

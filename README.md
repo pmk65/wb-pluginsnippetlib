@@ -17,27 +17,60 @@ FastScript snippet library with various functions to help creating WeBuilder plu
 <table>
 
   <tr>
-    <td>GetFilesList(folder)</td>
-    <td>Get list of files in a given path<br>
+    <td valign="top">GetFilesList(folder)</td>
+    <td valign="top">Get list of files in a given path<br>
 @param  string   folder  the root folder<br>
 @return string   comma separated list of filenames</td>
   </tr>
 
   <tr>
-    <td>GetFoldersList(folder)</td>
-    <td>Get list of folders in a given path<br>
+    <td valign="top">GetFoldersList(folder)</td>
+    <td valign="top">Get list of folders in a given path<br>
 @param  string   folder  the root folder<br>
 @return string   comma separated list of foldernames</td>
   </tr>
 
   <tr>
-    <td>GetFilesFoldersList(folder)</td>
-    <td>@param  string   folder  the root folder<br>
+    <td valign="top">GetFilesFoldersList(folder)</td>
+    <td valign="top">@param  string   folder  the root folder<br>
 @param  int      mode    0=files, 1=folders<br>
 @return string   comma separated list of file or folder names
  </td>
   </tr>
 
+  <tr>
+    <td valign="top">CopyFile(source, destination, overwrite)</td>
+    <td valign="top">Copy one or more files from one location (the source) to another (destination).<br>
+
+If source contains wildcard characters or destination ends with a path separator (\), it is assumed that destination is an existing folder in which to copy matching files.<br>
+Otherwise, destination is assumed to be the name of a file to create. In either case, three things can happen when an individual file is copied.<br>
+If destination does not exist, source gets copied. This is the usual case.<br>
+If destination is an existing file, an error occurs if overwrite is false. Otherwise, an attempt is made to copy source over the existing file.<br>
+If destination is a directory, an error occurs.<br>
+<br>
+@param  string   source location of one or more files to be copied<br>
+@param  string   destination location to where one or more files in source will be copied<br>
+@param  bool     overwrite True allows the overwriting of existing files in the destination</td>
+  </tr>
+ 
+  <tr>
+    <td valign="top">MoveFile(source, destination)</td>
+    <td valign="top">Move one or more files from one location (the source) to another (destination).<br>
+
+If source contains wildcards or destination ends with a path separator (\), it is assumed that destination specifies an existing folder in which to move the matching files. Otherwise, destination is assumed to be the name of a destination file to create. In either case, three things can happen when an individual file is moved:
+If destination does not exist, the file gets moved. This is the usual case.<br>
+If destination is an existing file, an error occurs.<br>
+If destination is a directory, an error occurs.<br>
+
+@param  string   source location of one or more files to be moved<br>
+@param  string   destination location to where one or more files in source will be moved</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"></td>
+    <td valign="top"></td>
+  </tr>
+  
 </table>
 
 

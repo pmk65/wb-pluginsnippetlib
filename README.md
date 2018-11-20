@@ -263,4 +263,142 @@ getKeys(dummy) to get list of keys<br>
 
 </table>
 
+#### RegularExpression functions:
+
+<table>
+
+  <tr>
+    <td valign="top"><strong>WildcardsToRegex(str)</strong></td>
+    <td valign="top"><strong>Convert wildcard characters * and ? to regular expression equivalents</strong><br>
+@param  string   str The string to convert<br>
+@return string</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>EscapeRegExp(str)</strong></td>
+    <td valign="top"><strong>Escape characters which have special meaning in regular expressions</strong><br>
+@param  string   str The string to escape<br>
+@return string</td>
+  </tr>
+
+</table>
+
+#### Misc functions:
+
+<table>
+
+  <tr>
+    <td valign="top"><strong>Debug(label, val)</strong></td>
+    <td valign="top"><strong>Debug helper - Shows output in WeBuilder message panel</strong><br>
+@param  string    label: the label<br>
+@param  mixed     val: the variable
+@return void</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>CopyToClipboard(contents)</strong></td>
+    <td valign="top"><strong>Copy contents to Clipboard</strong><br>
+@param  string   contents the contents to place on clipboard<br>
+@return void</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>PasteFromClipboard()</strong></td>
+    <td valign="top"><strong>Paste contents from Clipboard into editor</strong><br>
+@return void</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>Max(x,y)</strong></td>
+    <td valign="top"><strong>Returns the largest of two numbers</strong><br>
+@param     number  x: The 1st value<br>
+@param     number  y: The 2nd value<br>
+@return    number</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>Min(x,y)</strong></td>
+    <td valign="top"><strong>Returns the smallest two numbers</strong><br>
+@param     number  x: The 1st value<br>
+@param     number  y: The 2nd value<br>
+@return    number</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>IntToHex(intNum)</strong></td>
+    <td valign="top"><strong>Convert integer value to 2-byte Hexadecimal number</strong><br>
+@param     int  intNum: The value<br>
+@return    string</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>UrlEncode(str)</strong></td>
+    <td valign="top"><strong>UrlEncode string</strong><br>
+@param  string   str  the string to urlencode<br>
+@return string   res  the urlencoded string</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>UrlDecode(str)</strong></td>
+    <td valign="top"><strong>UrlDecode string</strong><br>
+@param  string   str<br>
+@return string</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>OpenUrlInBrowser(url)</strong></td>
+    <td valign="top"><strong>Open URL in default browser</strong><br>
+@param  string   url the url to open<br>
+@return void</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>RemoveQuoted(str)</strong></td>
+    <td valign="top"><strong>Get rid of quoues and anything between them</strong><br>
+@param  string  str: the string to clean<br>
+@return string</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>ReturnToOriginalTab(fileName)</strong></td>
+    <td valign="top"><strong>Return to original Editor Tab after opening new Document/Tab</strong><br>
+@param  string   fileName path/name of file in original Tab<br>
+@return void</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>CreateJScriptObject(jsCode)</strong></td>
+    <td valign="top"><strong>Allows you to run true JavaScript (MS variant) functions</strong><br>
+Similar to Webkit/Chromium frame, except no frame/window needs to be opened first.<br>
+@param  string   javaScript code<br>
+@return object</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>SendKeys(keys)</strong></td>
+    <td valign="top"><strong>Sends one or more keystrokes to the active window (as if typed on the keyboard)</strong><br>
+For more info, see: <a href="href="https://msdn.microsoft.com/en-us/library/8c6yea83.aspx">https://msdn.microsoft.com/en-us/library/8c6yea83.aspx</a><br>
+Example: (Activates Find dialog and enter "hello" in searchfield)<br>
+SendKeys("^fhello");<br>
+@param  string   ksSeq<br>
+@return void</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>PlaySound(soundFile)</strong></td>
+    <td valign="top"><strong>Play sound using Windows Media Player</strong><br>
+@param  string   soundFile The sound file to play<br>
+@return void</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>TrimPath(path, segments)</strong></td>
+    <td valign="top"><strong>Removes last segment of path/url</strong><br>
+@param  string   path the path/url to trim<br>
+@param  int      segments number of segments to trim<br>
+@return string</td>
+  </tr>
+
+</table>
+
 W.I.P.

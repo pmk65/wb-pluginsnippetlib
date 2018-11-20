@@ -168,12 +168,19 @@ If destination is a directory, an error occurs.<br>
 
   <tr>
     <td valign="top"><strong>ParseJson(jsonStr)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>JSON parser using "htmlfile" OLE object</strong><br>
+The JSON result object is extended with two custom methods, making data fully accessible from FastScript. Custom methods:<br>
+getProp(key/index) to access properties by index or name<br>
+getKeys(dummy) to get list of keys<br>
+@param  string   jsonStr The JSON string to parse<br>
+@return mixed    variant or empty string if failure</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>XhrRequest(uri)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Make XHR request and return result</strong><br>
+@param  string   uri<br>
+@return string</td>
   </tr>
 
 </table>
@@ -184,37 +191,51 @@ If destination is a directory, an error occurs.<br>
 
   <tr>
     <td valign="top"><strong>GetVarType(val)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Get the type of a variable</strong><br>
+@param  mixed    val The variable to test<br>
+@return integer  The variable type</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>VarTypeAsText(type)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"<strong>>Convert variable type (integer) to text value (constant name)</strong><br>
+@param  integer   type The variable type<br>
+@return string    The textual name of the variable type</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>IsArray(val)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Test if variable is an array</strong><br>
+@param  mixed   val<br>
+@return bool    True is val is a array</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>IsBool(val)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Test if variable is a boolean</strong><br>
+@param  mixed   val<br>
+@return bool    True is val is a boolean</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>IsFloat(val)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Test if variable is a floating point</strong><br>
+@param  mixed   val<br>
+@return bool    True is val is a floating point</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>IsInt(val)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Test if variable is an integer</strong><br>
+@param  mixed   val<br>
+@return bool    True is val is an integer</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>IsString(val)</strong></td>
-    <td valign="top"></td>
+    <td valign="top"><strong>Test if variable is a string </strong><br>
+@param  mixed   val<br>
+@return bool    True is val is a string</td>
   </tr>
 
 </table>

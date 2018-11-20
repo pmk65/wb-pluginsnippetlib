@@ -112,12 +112,111 @@ If destination is a directory, an error occurs.<br>
   </tr>
 
   <tr>
+    <td valign="top"><strong>SelectFile(defaultPath, title)</strong></td>
     <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>SelectFolder(defaultPath, text, createnew)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>FileGetContents(filename)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>FilePutContents(filename, contents)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>GetTempFileName(ext)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>GetSystemFolder(type)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>GetRelPath(abspath, root, slash)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>GetRecursiveFileList(folder)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>ToShortName(longName)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"></td>
+    <td valign="top"></td>
+  </tr>
+</table>
+
+#### AJAX functions:
+
+<table>
+
+  <tr>
+    <td valign="top"><strong>ParseJson(jsonStr)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>XhrRequest(uri)</strong></td>
     <td valign="top"></td>
   </tr>
 
 </table>
 
+#### Variables functions:
 
+<table>
+
+  <tr>
+    <td valign="top"><strong>GetVarType(val)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>VarTypeAsText(type)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>IsArray(val)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>IsBool(val)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>IsFloat(val)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>IsInt(val)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>IsString(val)</strong></td>
+    <td valign="top"></td>
+  </tr>
+
+</table>
 
 W.I.P.

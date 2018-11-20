@@ -18,14 +18,14 @@ FastScript snippet library with various functions to help creating WeBuilder plu
 
   <tr>
   <td valign="top"><strong>GetFilesList(folder)</strong></td>
-    <td valign="top">Get list of files in a given path<br>
+    <td valign="top"><strong>Get list of files in a given path</strong><br>
 @param  string   folder  the root folder<br>
 @return string   comma separated list of filenames</td>
   </tr>
 
   <tr>
     <td valign="top"><strong>GetFoldersList(folder)</strong></td>
-    <td valign="top">Get list of folders in a given path<br>
+    <td valign="top"><strong>Get list of folders in a given path</strong><br>
 @param  string   folder  the root folder<br>
 @return string   comma separated list of foldernames</td>
   </tr>
@@ -40,7 +40,7 @@ FastScript snippet library with various functions to help creating WeBuilder plu
 
   <tr>
     <td valign="top"><strong>CopyFile(source, destination, overwrite)</strong></td>
-    <td valign="top">Copy one or more files from one location (the source) to another (destination).<br>
+    <td valign="top"><strong>Copy one or more files from one location (the source) to another (destination)</strong><br>
 
 If source contains wildcard characters or destination ends with a path separator (\), it is assumed that destination is an existing folder in which to copy matching files.<br>
 Otherwise, destination is assumed to be the name of a file to create. In either case, three things can happen when an individual file is copied.<br>
@@ -56,7 +56,7 @@ If destination is a directory, an error occurs.<br>
  
   <tr>
     <td valign="top"><strong>MoveFile(source, destination)</strong></td>
-    <td valign="top">Move one or more files from one location (the source) to another (destination).<br>
+    <td valign="top"><strong>Move one or more files from one location (the source) to another (destination)</strong><br>
 
 If source contains wildcards or destination ends with a path separator (\), it is assumed that destination specifies an existing folder in which to move the matching files. Otherwise, destination is assumed to be the name of a destination file to create. In either case, three things can happen when an individual file is moved:
 If destination does not exist, the file gets moved. This is the usual case.<br>

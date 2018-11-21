@@ -349,6 +349,47 @@ The JSON result object is extended with two custom methods, making data fully ac
 @return string   res   comma separated list of selected items
 </td>
   </tr>
+
+  <tr>
+    <td colspan="2"><strong>Mics GUI functions/examples</strong></td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>ShowAnalogClock()</strong></td>
+    <td valign="top"><strong>Displays a woking Analog Clock</strong><br>
+Example of how to draw directly on the TForm Canvas using FastScript.<br>
+@return void
+    </td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>ShowDialog(title, message, buttonRightCaption, buttonLeftCaption, buttonCenterCaption, defaultButtonCaption, timeout, imageFile)</strong></td>
+    <td valign="top"><strong>Messagebox with 1 to 3 buttons and optional button timeout</strong><br>
+Also incl. support for displaying image. (Both static and animated sprite sequences)<br>
+Note: You will need to include the AnimSprite() function if you want to use animations<br>
+You can turn regular animated GIF into sprite frames, using <a href="http://www.piskelapp.com" target="_blank">Piskel</a><br>
+@param  string         title                 Dialogbox title<br>
+@param  string         message               Dialogbox Message<br>
+@param  string         buttonRightCaption	Caption of Right button (Empty string if not used)<br>
+@param  string         buttonLeftCaption     Caption of Left button (Empty string if not used)<br>
+@param  string         buttonCenterCaption   Caption of Center button (Empty string if not used)<br>
+@param  string         defaultButtonCaption  Caption of default button (Empty string if not used)<br>
+@param  integer        timeout               Timeout value for timed dialogbox. 0 for no timeout<br>
+@param  string/array   imageFile             Single Image: path/name  (Empty string if not used), Animated Image: [path/name, [duration frame1, duration frame2, ...]]<br>
+@return string                               Caption of clicked button or empty string if dialog was cancled.
+</td>
+  </tr>
+
+  <tr>
+    <td valign="top"><strong>AnimateSprite(imgObj, durations)</strong></td>
+    <td valign="top"><strong>Animate Sprite image loaded into TImage object</strong><br>
+When animation ends, delete the "imageAnimTimer" object to end animation.<br>
+@param  object  imgObj The TImage object to animate<br>
+@param  array   durations The duration of each sprite frame<br>
+@return void
+    </td>
+  </tr>
+
 </table>
 
 ### Misc functions:
@@ -454,17 +495,9 @@ SendKeys("^fhello");<br>
 
   <tr>
     <td valign="top"><strong>PlaySound(soundFile)</strong></td>
-    <td valign="top"><strong>Play sound using Windows Media Player</strong><br>
+    <td valign="top"><strong>Play sound using Windows Media Player API</strong><br>
 @param  string   soundFile The sound file to play<br>
 @return void</td>
-  </tr>
-
-  <tr>
-    <td valign="top"><strong>TrimPath(path, segments)</strong></td>
-    <td valign="top"><strong>Removes last segment of path/url</strong><br>
-@param  string   path the path/url to trim<br>
-@param  int      segments number of segments to trim<br>
-@return string</td>
   </tr>
 
 </table>

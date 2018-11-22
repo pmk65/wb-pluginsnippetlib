@@ -9,7 +9,9 @@ RapidCSS: https://www.rapidcsseditor.com/<br/>
 HTMLPad: https://www.htmlpad.net/
 
 ### Function:
-FastScript snippet library with various functions to help creating WeBuilder plugins.
+FastScript snippet library with various functions to help your create WeBuilder plugins.
+
+For more information on the FastScript syntax and how to create WeBuilder plugins, see the <a href="http://help.blumentals.net/webuilder/plugins/develop/structure.htm" target="_blank">WeBuilder Documentation</a> or the original <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiE1t3ZjubeAhVnCcAKHcWZAMAQFjAAegQICRAC&url=https%3A%2F%2Fwww.fast-report.com%2Fpublic_download%2Ffs_en.pdf&usg=AOvVaw2bRZqajsrSV8zTMp6aby66" target="_blank">FastScript Manual.</a>
 
 
 ### Filehandling functions:
@@ -487,8 +489,8 @@ Similar to Webkit/Chromium frame, except no frame/window needs to be opened firs
     <td valign="top"><strong>SendKeys(keys)</strong></td>
     <td valign="top"><strong>Sends one or more keystrokes to the active window (as if typed on the keyboard)</strong><br>
 For more info, see: <a href="https://msdn.microsoft.com/en-us/library/8c6yea83.aspx" target="_blank">https://msdn.microsoft.com/en-us/library/8c6yea83.aspx</a><br>
-Example: (Activates Find dialog and enter "hello" in searchfield)<br>
-SendKeys("^fhello");<br>
+Example (Activates Find dialog and enter "hello" in searchfield):<br>
+<em>SendKeys("^fhello");</em><br>
 @param  string   ksSeq<br>
 @return void</td>
   </tr>
